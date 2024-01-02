@@ -29,6 +29,10 @@ Kommunikation mellan API:t och applikationen sker med hjälpa av Ajax-anrop med 
 ### Autentisering
 Autentisering sker med hjälp av token som skapas när en registerad användare loggar in i gränssnittet med korrekt mejladress och lösenord. Den token som genereras vid inloggning returneras i JSON-format och sparas i localstorage i webbläsaren. När en användare loggar ut rensas localstorage och användaren behöver logga in igen, få en ny token för att komma åt gränssnittet.
 
+Token returneras även vid inloggning direkt via webbtjänsten. Token behöver skickas med i headers som Authorization.
+
+Collection users och login är öppna och skyddas inte av token.
+
 ## Endpoints och användning
 
 ### Menu
