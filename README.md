@@ -16,6 +16,7 @@ Webbapplikationen har skapast med hjälp av frontend-ramverket React som har ins
 
 ### NPM-paket
 - Vite (React installerades med Vite)
+- TypeScript (följde med Vite)
 - Boostrap för CSS
 - Dompurify för sanitering av data
 - React-contenteditable för att möjliggöra contenteditable
