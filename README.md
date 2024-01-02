@@ -22,7 +22,7 @@ Delen som hanterar användare har funktionalitet för GET och POST.
 
 Login har enbart POST-funktionalitet som används enbart vid inloggning.
 
-API:t är skapat med Node.js, ramverket Express och några installerade NPM-paket.
+API:t är skapat med Node.js, ramverket Express och några installerade NPM-paket. Data från webbtjänsten lagras i en NoSQL-databas, MongoDB.
 
 Kommunikation mellan API:t och applikationen sker med hjälpa av Ajax-anrop med metoden Fetch. Data hämtas och skickas från och till API:t i JSON-format.
 
