@@ -1,4 +1,4 @@
-# dt162g_project_admin administrations webbapplikation, React + TypeScript + Vite
+# Administrations webbapplikation, React + TypeScript + Vite
 
 Repository för administrativ webbapplikatin för projekt
 
@@ -13,6 +13,14 @@ Applikationen är en administrativ webbapplikation för ett fiktivt café vid na
 Caféet använder applikationen för att hämta, lägga till, ändra och radera data som de presenterar på sin publika webbplats. De data hanteras är data för deras meny och att skapa nya användare till administrationsgränssnittet. Menyn och användare till gränssnittet lagras i en REST-webbtjänst.
 
 Webbapplikationen har skapast med hjälp av frontend-ramverket React som har installerats med Vite. CSS är skapad med CSS-ramverket Bootstrap och minimalt med egenskriven CSS-kod. All kod är skriven i TypeScript och JSX och är komponentbaserad. Det finns komponenter för header, footer, navigering, att lägga till data i menyn, hämta och ändra och radera data i menyn, lägga till användare och logga in användare. 
+
+### NPM-paket
+- Vite (React installerades med Vite)
+- Boostrap för CSS
+- Dompurify för sanitering av data
+- React-contenteditable för att möjliggöra contenteditable
+- React-dom för att arbeta med DOM
+- React-router-dom för att använda React Router
 
 ## API som konsumeras
 
