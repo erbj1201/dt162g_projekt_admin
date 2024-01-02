@@ -10,7 +10,7 @@ Kurs: DT162G - JavaScriptbaserad Webbutveckling
 
 ## Om applikationen 
 Applikationen är en administrativ webbapplikation för ett fiktivt café vid namn CoffeCake Café. För att kunna komma åt administationsgränssnittet behöver du skapa användare och logga in med mejladress och lösenord. 
-Caféet använder applikationen för att hämta, lägga till, ändra och radera data som de presenterar på sin publika webbplats. De data som ändras är data för deras meny och att skapa nya användare till administrationsgränssnittet. Menyn och användare till gränssnittet lagras i en REST-webbtjänst.
+Caféet använder applikationen för att hämta, lägga till, ändra och radera data som de presenterar på sin publika webbplats. De data hanteras är data för deras meny och att skapa nya användare till administrationsgränssnittet. Menyn och användare till gränssnittet lagras i en REST-webbtjänst.
 
 Webbapplikationen har skapast med hjälp av frontend-ramverket React som har installerats med Vite. CSS är skapad med CSS-ramverket Bootstrap och minimalt med egenskriven CSS-kod. All kod är skriven i TypeScript och JSX och är komponentbaserad. Det finns komponenter för header, footer, navigering, att lägga till data i menyn, hämta och ändra och radera data i menyn, lägga till användare och logga in användare. 
 
