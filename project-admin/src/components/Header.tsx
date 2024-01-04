@@ -1,7 +1,6 @@
 //Header.tsx
 //Import
 import React from "react";
-import Nav from "../components/MainNav";
 import heroImage from "../assets/header_coffe.jpg";
 //Component
 const Header: React.FC = () => {
@@ -17,7 +16,6 @@ const Header: React.FC = () => {
           alt="Hero"
         />
       </div>
-      <Nav />
     </header>
   );
 };
