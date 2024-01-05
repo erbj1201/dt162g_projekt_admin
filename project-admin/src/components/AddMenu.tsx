@@ -1,6 +1,7 @@
 //AddMenu.tsx
 //Import
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import DOMPurify from "dompurify";
 
 // Defining the structure of the menu item
 interface MenuItem {
@@ -29,7 +30,9 @@ const AddMenuItemComponent: React.FC = () => {
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setNewItem((prevItem) => ({ ...prevItem, [name]: value }));
+    // Sanitize the input 
+    const sanitizedValue = DOMPurify.sanitize(value);
+    setNewItem((prevItem) => ({ ...prevItem, [name]: sanitizedValue }));
   };
 
   // State to manage messages

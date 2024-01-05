@@ -1,6 +1,7 @@
 //AddUser.tsx
 //Import
 import React, { useState, FormEvent } from "react";
+import DOMPurify from "dompurify";
 //Structure for UserItem
 interface UserItem {
   email: string;
@@ -24,6 +25,14 @@ const AddUser: React.FC = () => {
   //Event for submit register form
   const addUserSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // Sanitize user input using DOMPurify
+    const sanitizedEmail = DOMPurify.sanitize(newUser.email);
+    const sanitizedPassword = DOMPurify.sanitize(newUser.password);
+// Update state with sanitized values
+setNewUser({
+  email: sanitizedEmail,
+  password: sanitizedPassword,
+});
     //Fetch
     try {
       const response = await fetch("http://127.0.0.1:3000/users", {
@@ -31,7 +40,10 @@ const AddUser: React.FC = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newUser),
+        body: JSON.stringify({
+          email: sanitizedEmail,
+          password: sanitizedPassword,
+        }),
       });
 
       const responseData = await response.json();
