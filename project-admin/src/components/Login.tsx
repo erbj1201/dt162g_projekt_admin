@@ -12,6 +12,8 @@ const Login: React.FC = () => {
     email: "",
     password: "",
   });
+//TO show message when login
+  const [showMessage, setShowMessage] = useState<string | null>(null);
   //Event for handling input-changes
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -36,15 +38,20 @@ const Login: React.FC = () => {
         const data = await response.json();
         const token = data.token;
         // Store the token in localStorage
+        if (token){
         localStorage.setItem("token", token);
         // Redirect to menu-page
         navigate("/");
       } else {
         //Error login
-        console.error("Login failed:", response.statusText);
+        setShowMessage("Felaktig inloggning, fel mejladress eller lösenord");
+
       } //Error login
+    }else {
+      setShowMessage("Fel mejladress eller lösenord");
+    }
     } catch (error) {
-      console.error("Login failed:", error);
+      setShowMessage("Fel vid inloggning");
     }
   };
 
@@ -53,6 +60,12 @@ const Login: React.FC = () => {
       <main className="container text-center">
         {/*Login-form*/}
         <h1 className="p-5 m-5">Logga in</h1>
+
+        {showMessage && (
+            <p className="alert alert-light text-center mt-2">
+              {showMessage}
+            </p>
+          )}
         <form
           className="form-control form-control-sm border-0 p-2 mx-auto w-100"
           onSubmit={loginUser}

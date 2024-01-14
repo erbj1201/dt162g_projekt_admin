@@ -52,20 +52,43 @@ label{
     font-weight: 200;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .table-btn{
+        padding: 0;
+        font-size: 0.8em;
+    }
+    table{
+        font-size: 0.8em;
+        max-width: 600px;
+        margin: auto;
+    }
+    .category{
+        display: none;
+    }
 
 }
-
-
+   
 @media screen and (max-width: 600px) {
     .table-btn{
         padding: 0;
         font-size: 0.8em;
 
     }
+    tbody{
+        width: 100%;
+        max-width: 280px;
+        margin: auto;
+    }
+    th{
+        font-size: 0.8em;
+    }
+    td{
+        font-size: 0.8em;
+    }
     table{
         font-size: 0.8em;
-        max-width: 300px;
+        width: 100%;
+        max-width: 280px;
         margin: auto;
     }
 
@@ -78,6 +101,6 @@ label{
     .category{
         display: none;
     }
-
    
 }
+

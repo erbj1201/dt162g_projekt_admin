@@ -197,8 +197,9 @@ const MenuComponent: React.FC = () => {
                   <th>Beskrivning</th>
                   <th className="category">Kategori</th>
                   <th>Pris</th>
-                  <th>Ändra</th>
-                  <th>Radera</th>
+                  <th className="delete">Radera</th>
+                  <th className="updateColumn">Ändra</th>
+                 
                 </tr>
               </thead>
               <tbody>
@@ -283,18 +284,18 @@ const MenuComponent: React.FC = () => {
                       <button
                         type="button"
                         className="table-btn btn btn-light"
-                        onClick={() => updatePost(post._id)}
+                        onClick={() => deletePost(post._id)}
                       >
-                        Ändra
+                        Radera
                       </button>
                     </td>
                     <td>
                       <button
                         type="button"
-                        className="table-btn btn btn-light"
-                        onClick={() => deletePost(post._id)}
+                        className="update table-btn btn btn-light"
+                        onClick={() => updatePost(post._id)}
                       >
-                        Radera
+                        Ändra
                       </button>
                     </td>
                   </tr>

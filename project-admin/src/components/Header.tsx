@@ -2,6 +2,7 @@
 //Import
 import React from "react";
 import heroImage from "../assets/header_coffe.jpg";
+import Nav from "../components/MainNav";
 //Component
 const Header: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Header: React.FC = () => {
           alt="Hero"
         />
       </div>
+      <Nav />
     </header>
   );
 };
