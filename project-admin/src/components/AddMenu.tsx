@@ -165,8 +165,10 @@ const AddMenuItemComponent: React.FC = () => {
                 </option>
                 <option value="Frukost">Frukost</option>
                 <option value="Bakelser">Bakelser</option>
-                <option value="Drycker">Drycker</option>
-                <option value="Lunch">Lunch</option>
+                <option value="Bullar & kakor">Bullar & kakor</option>
+                <option value="Smörgåsar">Smörgåsar</option>
+                <option value="Kalla drycker">Kalla drycker</option>
+                <option value="Varma drycker">Varma drycker</option>
                 {/* Add more options as needed */}
               </select>
             </div>
