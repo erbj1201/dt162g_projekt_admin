@@ -44,6 +44,8 @@ Collection users och login är öppna och skyddas inte av token.
 
 ## Endpoints och användning
 
+Denna URL användes av mig lokalt på datorn: http://127.0.0.1:3000/
+
 ### Menu
 Metod Ändpunkt Beskrivning
 
